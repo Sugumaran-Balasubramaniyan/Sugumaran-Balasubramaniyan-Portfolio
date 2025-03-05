@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sugumaran Balasubramaniyan | Data Scientist</title>
+    <title>Sugumaran | Data Scientist</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
             <div class="logo">Sugumaran</div>
@@ -24,102 +25,95 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero">
-        <div class="container">
-            <h1>Hi, I'm <span class="highlight">Sugumaran</span></h1>
-            <p>A Data Scientist specialized in AI, Machine Learning & Cloud Technologies</p>
-            <a href="#projects" class="btn">View Projects</a>
+        <div class="hero-content">
+            <img src="images/profile.jpg" alt="Sugumaran">
+            <h1>I'm <span class="highlight">Sugumaran</span></h1>
+            <p>Data Scientist | AI Enthusiast | Cloud Specialist</p>
+            <a href="#contact" class="btn">Hire Me</a>
         </div>
     </section>
 
-    <section id="about" class="fade-in">
+    <!-- About Section -->
+    <section id="about">
         <h2>About Me</h2>
-        <p>I am an experienced Data Professional with expertise in AI, Generative AI, LLMs, and Cloud Technologies. I have a strong background in Python, SQL, and MLOps, focusing on automation, analytics, and decision-making solutions.</p>
+        <p>Experienced Data Scientist with a strong background in AI, Generative AI, LLMs, and Cloud Computing. Passionate about solving complex business problems with data-driven solutions.</p>
     </section>
 
-    <section id="experience" class="fade-in">
+    <!-- Experience Section -->
+    <section id="experience">
         <h2>Experience</h2>
-        <div class="experience-box">
+        <div class="job">
             <h3>Data Analyst (Digital Marketing)</h3>
             <p>Les Compagnons de Paris | Jul 2023 - Dec 2023</p>
             <ul>
-                <li>Developed Power BI dashboards, improving data accuracy by 27%.</li>
-                <li>Conducted A/B testing, increasing conversion rates by 20%.</li>
+                <li>Created dynamic Power BI dashboards, improving data accuracy by 27%.</li>
+                <li>Implemented customer segmentation, increasing qualified leads by 50%.</li>
             </ul>
         </div>
-        <div class="experience-box">
+        <div class="job">
             <h3>Data Analyst</h3>
             <p>Capgemini | Apr 2021 - Jul 2022</p>
             <ul>
                 <li>Automated ETL pipelines using Python & AWS Glue.</li>
-                <li>Developed time-series forecasting models, saving €270,000 annually.</li>
+                <li>Developed time-series forecasting models, reducing costs by €270,000 annually.</li>
             </ul>
         </div>
     </section>
 
-    <section id="skills" class="fade-in">
+    <!-- Skills Section -->
+    <section id="skills">
         <h2>Skills</h2>
         <div class="skills-grid">
             <span>Python</span>
             <span>SQL</span>
             <span>Machine Learning</span>
             <span>Deep Learning</span>
-            <span>Data Engineering</span>
             <span>Cloud Computing</span>
-            <span>Apache Airflow</span>
-            <span>Tableau</span>
+            <span>Power BI</span>
+            <span>Data Engineering</span>
+            <span>MLOps</span>
         </div>
     </section>
 
-    <section id="projects" class="fade-in">
+    <!-- Projects Section -->
+    <section id="projects">
         <h2>Projects</h2>
         <div class="project">
+            <img src="images/project1.png" alt="Project 1">
             <h3>Predicting Patient Mortality</h3>
-            <p>Developed a Random Forest & Fusion model with SMOTE handling, achieving an AUC-ROC of 0.81 using MIMIC-III dataset.</p>
+            <p>Developed a Random Forest & Fusion model achieving an AUC-ROC of 0.81 using MIMIC-III dataset.</p>
         </div>
         <div class="project">
+            <img src="images/project2.png" alt="Project 2">
             <h3>Text Classification using Word2Vec</h3>
-            <p>Built an NLP model using Word2Vec for semantic similarity analysis on clinical notes.</p>
+            <p>Built an NLP model to analyze clinical notes for semantic similarity.</p>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
+        <p>Have an opportunity or question? Send me a message!</p>
+        
+        <form action="https://formsubmit.co/bsugumaran@hotmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    
         <p>Email: <a href="mailto:bsugumaran@hotmail.com">bsugumaran@hotmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/sugumaranbalasubramaniyan/" target="_blank">View Profile</a></p>
     </section>
+    
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Sugumaran Balasubramaniyan. All rights reserved.</p>
+        <p>&copy; 2025 Sugumaran. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        document.querySelector(".burger").addEventListener("click", function() {
-            document.querySelector(".nav-links").classList.toggle("nav-active");
-        });
-
-        // Smooth Scrolling
-        document.querySelectorAll("a[href^='#']").forEach(anchor => {
-            anchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
-            });
-        });
-
-        // Fade-in Animations
-        const fadeInElements = document.querySelectorAll(".fade-in");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        });
-
-        fadeInElements.forEach(element => observer.observe(element));
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

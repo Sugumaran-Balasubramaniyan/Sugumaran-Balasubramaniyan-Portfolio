@@ -1,14 +1,14 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background: #f5f5f5;
 }
 
+/* Navbar */
 header {
-    background-color: #222;
+    background: #222;
     padding: 15px 0;
     color: white;
     text-align: center;
@@ -32,49 +32,83 @@ header {
     font-weight: bold;
 }
 
+/* Hero Section */
 #hero {
     text-align: center;
-    padding: 50px;
+    padding: 60px;
     background: linear-gradient(to right, #0073e6, #00c6ff);
     color: white;
+}
+
+.hero-content img {
+    width: 150px;
+    border-radius: 50%;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 15px;
-    background-color: #fff;
+    background: white;
     color: #0073e6;
     text-decoration: none;
     border-radius: 5px;
 }
 
-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+/* Skills */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.skill-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.skill-list li {
+.skills-grid span {
     background: #0073e6;
     color: white;
-    display: inline-block;
     padding: 8px 12px;
     margin: 5px;
     border-radius: 5px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
+/* Projects */
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+button {
+    background: #0073e6;
     color: white;
-    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
